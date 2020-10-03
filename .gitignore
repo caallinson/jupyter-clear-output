@@ -3,4 +3,5 @@ workspace.code-workspace
 *.pyc
 .vscode/*
 ignore/*
+test data/*
 *.ipynb
