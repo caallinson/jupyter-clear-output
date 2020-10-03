@@ -2,6 +2,9 @@ import json
 import sys  
 
 def process_json(json_parsed):
+    """
+    Clear outputs from Notebook saved in JSON format
+    """
     if isinstance(json_parsed, dict):
         if 'cells' in json_parsed.keys():
             for obj in json_parsed['cells']:
@@ -15,6 +18,9 @@ def process_json(json_parsed):
     return json_parsed
 
 def main():
+    """
+    Clears outputs from Notebook. Print errors and help messages as needed
+    """
     if len(sys.argv) == 1:
         print('\t')
         print('\tClean Output of Jupyter Notebook Files (note: must be in JSON format)')
