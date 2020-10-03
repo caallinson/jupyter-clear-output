@@ -21,3 +21,5 @@ Add `jupyter-clear-output.py` to `.git\hooks\` and the below to `.git\hooks\pre-
 `git add .`
 
 Alternatively, use `pre-commit.sample` file provided (remove .sample extension for use)
+
+**Note**: Path to `python` must either be in the environment or replace `python` with path to your interpreter (ex: `~/Anaconda3/python`)
