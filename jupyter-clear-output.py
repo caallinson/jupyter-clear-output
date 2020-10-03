@@ -2,11 +2,13 @@ import json
 import sys  
 
 def process_json(json_parsed):
-    
     if isinstance(json_parsed, dict):
-        for obj in json_parsed['cells']:
-            if 'outputs' in obj.keys():
-                obj['outputs'] = []
+        if 'cells' in json_parsed.keys():
+            for obj in json_parsed['cells']:
+                if 'outputs' in obj.keys():
+                    obj['outputs'] = []
+        else:
+            return None
     else:
         return None
 
