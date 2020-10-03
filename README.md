@@ -1,4 +1,4 @@
-# jupyter-clean-output
+# jupyter-clear-output
 Python script to clear output cells from Jupyter notebook
 (Note: notebook must be saved in JSON format with `.ipynb` extension)
 
