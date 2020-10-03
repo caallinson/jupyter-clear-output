@@ -14,9 +14,14 @@ def process_json(json_parsed):
 
 def main():
     if len(sys.argv) == 1:
-        print('\tClean Output of Jupyter Notebook Files')
-        print('\tError: Provide Jupyter notebook file path')
+        print('\t')
+        print('\tClean Output of Jupyter Notebook Files (note: must be in JSON format)')
+        print('\t')
         print('\t\t-f : Force read of non-ipynb file')
+        print('\t')
+        print('\t---------------------------------')
+        print('\tError: Provide Jupyter notebook file path')
+        print('\t')
         return 1
 
     fName = None
