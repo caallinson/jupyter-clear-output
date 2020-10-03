@@ -1,1 +1,6 @@
 workspace.code-workspace
+*/.pytest_cache/*
+*.pyc
+.vscode/*
+ignore/*
+*.ipynb
