@@ -32,6 +32,8 @@ def main():
         print('\t')
         return 1
 
+    process_fx = None
+
     fName = None
     for arg in sys.argv[1:]:
         if arg[0] != '-':
@@ -40,11 +42,17 @@ def main():
         print('\tError: File name not provided')
         return 1
 
-    if fName.lower()[-6:] != ".ipynb":
+    fExtension = fName.lower().split(".")[-1]
+
+    if fExtension == "ipynb":
+        process_fx = process_json
+    else:
         if '-f' not in sys.argv:
             print('\tError: File not .ipynb extension')
             print('\t\tUse -f to force')
             return 1
+        else:
+            process_fx = process_json
 
     try:
         fRead = open(fName)
@@ -61,13 +69,14 @@ def main():
         return 1
 
     fRead.close()
-    f_contents = process_json(f_contents)
+    f_contents = process_fx(f_contents)
 
     if f_contents is not None:
         fWrite = open(fName, 'w')
         json.dump(f_contents, fWrite, indent=1)
     else:
-        print("\tError: Couldn't process JSON")
+        if process_fx is process_json:
+            print("\tError: Couldn't process JSON")
         return 1
 
     return 0
