@@ -13,7 +13,9 @@ Add `jupyter-clear-output.py` to `.git\hooks\` and the below to `.git\hooks\pre-
 `shopt -s nullglob`
 
 `for i in **/*.ipynb; do`
+
 `	python ./.git/hooks/jupyter-clear-output.py $i`
+
 `done`
 
 `git add .`
