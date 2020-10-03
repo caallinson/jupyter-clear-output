@@ -19,3 +19,5 @@ Add `jupyter-clear-output.py` to `.git\hooks\` and the below to `.git\hooks\pre-
 `done`
 
 `git add .`
+
+Alternatively, use `pre-commit.sample` file provided (remove .sample extension for use)
