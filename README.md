@@ -13,6 +13,7 @@ Add `jupyter-clear-output.py` to `.git\hooks\` and the below to `.git\hooks\pre-
 `## Change Path to Python Here: ##`
 
 `python_path=python`
+
 `#python_path=~/Anaconda3/python`
 
 `##`
